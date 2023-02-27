@@ -1,0 +1,41 @@
+class Coche {
+    constructor(modelo, velocidad, antiguedad){
+        this.modelo = modelo;
+        this.velocidad = velocidad;
+        this.antiguedad = antiguedad;
+    }
+    aunemtarVelociad(){
+        this.velocidad += 1;
+    }
+    reducirVelociad(){
+        this.velocidad -= 1;
+    }
+};
+
+class Autobus extends Coche {
+    constructor(modelo, velocidad, antiguedad) {
+        super(modelo, velocidad, antiguedad);
+        this.altura = 5
+    }
+    mostrarAltura(){
+        return "La altura del bus es: " + this.altura;
+    }
+}
+
+var autobus1 = new Autobus ('Pegasus', 100, 2010);
+console.log(autobus1);
+console.log(autobus1.mostrarAltura());
+
+
+
+var coche1 = new Coche('BMW', 200, 2017);
+var coche2 = new Coche('Audi', 150, 2018);
+var coche3 = new Coche('Mercedes', 180, 2015);
+var coche4 = new Coche('Renault', 140, 2020);
+
+console.log(coche1);
+coche1.aunemtarVelociad();
+coche1.aunemtarVelociad();
+coche1.aunemtarVelociad();
+console.log(coche1);
+
