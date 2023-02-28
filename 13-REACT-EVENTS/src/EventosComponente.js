@@ -3,16 +3,18 @@ import React from 'react'
 export const EventosComponente = () => {
   
     const hasDadoClick = (e, nombre) => {
-        alert("Has dado click al botón " + nombre);
+        alert("Click" + nombre);
     }
 
-  
+    function hasDadoDobleClick(e){
+        alert("Doble Click");
+    }
   
    return (
     <div>
         <h2>Eventos en React</h2>
 
-        {/* Evento click */}
+        {/* Evento click, VERSION INCRUSTADA*/}
         {/* <button onClick={ (e) => {
             console.log(e)
             console.log("Botón pulsado")
@@ -20,8 +22,13 @@ export const EventosComponente = () => {
         BOTON
         </button> */}
 
-        <button onClick={ e => hasDadoClick(e, "Ruben")}>PULSA</button>
+        {/* Evento click, VERSION LLAMADA A FUNCION */}
+        <button onClick={ e => hasDadoClick(e, "Ruben")}>CLICK</button>
         
+        {/* Evento doble click */}
+        <button onDoubleClick={hasDadoDobleClick}>DOBLE CLICK</button>
+
+
     </div>
   )
 }
