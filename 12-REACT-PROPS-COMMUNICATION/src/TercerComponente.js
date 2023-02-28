@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 export const TercerComponente = ({nombre, apellidos, ficha}) => {
-  // (props) -> con DESTRUCTURING, = (nombre, apellidos, ficha)
+// export const TercerComponente = ({nombre = "Nom_DEFAULT", apellidos = "Ape_DEFAULT", ficha}) => {
+// Aquí jugamos con los PARAMETROS POR DEFECTO
+
+// (props) -> con DESTRUCTURING, = (nombre, apellidos, ficha)
   // Así nos ahorramos de poner tantas veces props en la llamada de los li
   
   // PropTypes  
@@ -28,4 +31,9 @@ TercerComponente.propTypes = {
     nombre: PropTypes.string.isRequired,
     apellidos: PropTypes.string.isRequired,
     ficha: PropTypes.object
+}
+
+TercerComponente.defaultProps = {
+  nombre: "Ruben_DEF",
+  apellidos: "Alvarez_DEF"
 }
