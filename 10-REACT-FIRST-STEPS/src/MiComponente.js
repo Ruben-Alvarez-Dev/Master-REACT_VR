@@ -4,13 +4,23 @@ import React from "react";
 // Función del componente
 const MiComponente = () => {
 
-    return (<div className="MiComponente">
-                <h2>MiComponente</h2>
-                <hr></hr>
+    let nombre = "Victor";
+    let web = "victorroblesweb.es";
 
+    let usuario = {
+        nombre: "Victor",
+        apellidos: "Robles",
+        web: "victorroblesweb.es"
+    }
+
+    return (<div className="MiComponente">
+                <hr/>
+                <h2>Componente creado</h2>
+                <h3>Datos del usuario:</h3>
                 <ul>
-                    <li>Hola 1</li>
-                    <li>Hola 2</li>
+                    <li>Nombre: <strong>{usuario.nombre}</strong></li>
+                    <li>Apellidos: <strong>{usuario.apellidos}</strong></li>
+                    <li>Web: <strong>{usuario.web}</strong></li>
                 </ul>
             </div>);
 }

@@ -12,7 +12,6 @@ function App() {
         </p>
       {/* Cargo MiComponente */}
       <MiComponente/>
-      <MiComponente/>
       
       </header>
 
