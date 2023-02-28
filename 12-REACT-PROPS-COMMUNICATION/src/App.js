@@ -12,6 +12,7 @@ function App() {
     estado: "bueno",
     alergias: "ninguna"
   }
+  const numero=123456;
   
   return (
     <div className="App">
@@ -26,6 +27,7 @@ function App() {
         <hr/>
         <TercerComponente
             nombre="Ruben"
+            // nombre={numero}
             apellidos="Alvarez"
             ficha={ficha_medica}
   
