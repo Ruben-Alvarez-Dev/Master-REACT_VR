@@ -19,11 +19,27 @@ export const MiPrimerEstado = () => {
     return (
     <div>
         <h3>Componente: MiPrimerEstado</h3>
-        <strong className = "label">
+        
+        <>Nombre: </>
+        <p className={nombre.lenght >= 4 ? 'verde' : 'rojo'}>
             {nombre}
-        </strong><br></br>
-        <button onClick={ e => cambiarNombre (e, "Perico")}>Cambiar</button>
-        <input type="text" onKeyUp={ e => cambiarNombre( e, e.target.value ) } placeholder="Escribe nombre"></input>
+        </p> 
+        
+        
+        {/* <button onClick={ e => cambiarNombre (e, "Perico")}>Cambiar</button>
+        <br></br> */}
+        
+        
+        <input type="text" onClick={ e => cambiarNombre( e, e.target.value ) } placeholder="Escribe nombre"></input>
+    
+        
+        
+        <br></br>        
+        {/* <button onClick = { e => {
+            console.log("VALOR GUARDADO: ", nombre);
+        }}>Mostrar</button> */}
+
+       
     </div>
   )
 }
